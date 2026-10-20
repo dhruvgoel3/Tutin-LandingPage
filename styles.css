@@ -1101,7 +1101,14 @@ button, input, select, textarea {
   color: var(--text-secondary);
 }
 
-/* ── 11. Metrics Banner & Trust Cards ────────────────────────────────────── */
+/* ── 11. Trust Banner & Board Trust Ribbon ────────────────────────────────── */
+.trust-banner {
+  background: #FFFFFF;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+
 .metrics-banner {
   background: #FFFFFF;
   border-top: 1px solid var(--border);
@@ -1170,8 +1177,6 @@ button, input, select, textarea {
 
 .brand-trust-row {
   text-align: center;
-  border-top: 1px solid var(--border);
-  padding-top: 24px;
 }
 
 .trust-heading {
