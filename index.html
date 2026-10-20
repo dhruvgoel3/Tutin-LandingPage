@@ -38,13 +38,6 @@
   <div class="ambient-glow glow-2" aria-hidden="true"></div>
   <div class="ambient-glow glow-3" aria-hidden="true"></div>
 
-  <!-- ── 1. Top Announcement Bar ───────────────────────────────── -->
-  <div class="top-announcement-bar">
-    <div class="container announcement-content">
-      <span class="announcement-pill">New</span>
-      <p><strong>Tutin 2.0 is live!</strong> Zero-commission fee tracking & shareable Digital Visiting Cards. <a href="#features" class="announcement-link">Explore features &rarr;</a></p>
-    </div>
-  </div>
 
   <!-- ── 2. Navigation Header ─────────────────────────────────── -->
   <header class="site-header" id="header">
@@ -57,6 +50,8 @@
       <nav class="main-nav" aria-label="Primary Navigation">
         <ul class="nav-links">
           <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#interactive-demo" class="nav-link">App Tour</a></li>
+          <li><a href="#app-gallery" class="nav-link">App Gallery</a></li>
           <li><a href="#for-tutors" class="nav-link">For Tutors</a></li>
           <li><a href="#for-students" class="nav-link">For Students</a></li>
           <li><a href="#discovery" class="nav-link">Find Tutors</a></li>
@@ -87,6 +82,8 @@
       <nav class="mobile-nav">
         <ul class="mobile-nav-links">
           <li><a href="#features" class="mobile-link">Features</a></li>
+          <li><a href="#interactive-demo" class="mobile-link">App Tour</a></li>
+          <li><a href="#app-gallery" class="mobile-link">App Gallery</a></li>
           <li><a href="#for-tutors" class="mobile-link">For Tutors</a></li>
           <li><a href="#for-students" class="mobile-link">For Students</a></li>
           <li><a href="#discovery" class="mobile-link">Find Tutors</a></li>
@@ -178,130 +175,33 @@
               </div>
             </div>
 
-            <!-- Realistic Smartphone Mockup -->
-            <div class="phone-frame">
-              <!-- Speaker & Dynamic Island -->
-              <div class="phone-top-bar">
-                <span class="phone-time">9:41</span>
-                <div class="phone-island"></div>
-                <div class="phone-indicators">
-                  <i class="fa-solid fa-signal"></i>
-                  <i class="fa-solid fa-wifi"></i>
-                  <i class="fa-solid fa-battery-full"></i>
-                </div>
-              </div>
+            <!-- Realistic Smartphone Device Container with Real Flutter App Screens -->
+            <div class="hero-device-wrapper">
               
-              <!-- App Screen UI -->
-              <div class="phone-screen">
-                
-                <!-- Screen Header -->
-                <div class="app-screen-header">
-                  <div class="user-greeting">
-                    <img src="assets/avatars/avatar_1.png" alt="Rajesh Sharma" class="user-avatar">
-                    <div>
-                      <span class="app-subtitle">Welcome back</span>
-                      <h4 class="app-title">Rajesh Sharma, M.Sc</h4>
-                    </div>
-                  </div>
-                  <span class="role-pill"><i class="fa-solid fa-shield-check"></i> Verified</span>
-                </div>
-
-                <!-- Live Switcher inside App Preview -->
-                <div class="preview-mode-bar">
-                  <button class="preview-mode-btn active" data-mockup="teacher">Teacher View</button>
-                  <button class="preview-mode-btn" data-mockup="student">Student View</button>
-                </div>
-
-                <!-- Teacher App View -->
-                <div class="mockup-content" id="teacherMockup">
-                  <!-- Stats Row -->
-                  <div class="app-stats-grid">
-                    <div class="app-stat-card">
-                      <span class="stat-label">Active Batches</span>
-                      <span class="stat-value">4 Batches</span>
-                    </div>
-                    <div class="app-stat-card">
-                      <span class="stat-label">Total Students</span>
-                      <span class="stat-value">68 Enrolled</span>
-                    </div>
-                    <div class="app-stat-card full-width highlight-card">
-                      <div class="stat-split">
-                        <div>
-                          <span class="stat-label">October Fee Collections</span>
-                          <span class="stat-value primary-color">₹94,000</span>
-                        </div>
-                        <span class="stat-tag success"><i class="fa-solid fa-arrow-trend-up"></i> 92% Collected</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Active Batch Card -->
-                  <div class="app-batch-card">
-                    <div class="batch-header">
-                      <div>
-                        <span class="batch-subject">Physics • Class 12 CBSE</span>
-                        <h5 class="batch-name">Target Board & JEE Main 2026</h5>
-                      </div>
-                      <span class="batch-time-pill"><i class="fa-regular fa-clock"></i> 5:00 PM</span>
-                    </div>
-                    <div class="batch-meta">
-                      <span><i class="fa-solid fa-user-group"></i> 28 / 30 Students</span>
-                      <span><i class="fa-solid fa-calendar-days"></i> Mon, Wed, Fri</span>
-                    </div>
-                    <div class="batch-actions">
-                      <button class="app-btn-sm primary"><i class="fa-solid fa-qrcode"></i> Show QR</button>
-                      <button class="app-btn-sm outline"><i class="fa-solid fa-receipt"></i> Fees</button>
-                      <button class="app-btn-sm outline"><i class="fa-solid fa-book-open"></i> Notes</button>
-                    </div>
-                  </div>
-
-                  <!-- Join Request Notification -->
-                  <div class="app-notification-card">
-                    <div class="notif-header">
-                      <i class="fa-solid fa-bell"></i>
-                      <span>New Join Request</span>
-                    </div>
-                    <p class="notif-text"><strong>Rohan Verma</strong> requested admission to Chemistry Batch</p>
-                    <div class="notif-actions">
-                      <button class="notif-btn accept">Accept</button>
-                      <button class="notif-btn decline">Decline</button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Student App View (Hidden by default) -->
-                <div class="mockup-content hidden" id="studentMockup">
-                  <div class="student-welcome-banner">
-                    <h5>Class 12 Boards • Science Stream</h5>
-                    <p>3 Enrolled Batches • Today's class at 5:00 PM</p>
-                  </div>
-
-                  <div class="student-batch-card">
-                    <div class="batch-header">
-                      <div>
-                        <span class="batch-subject">Advanced Physics</span>
-                        <h5 class="batch-name">Prof. Rajesh Sharma</h5>
-                      </div>
-                      <span class="badge-status-paid"><i class="fa-solid fa-check"></i> Fee Paid</span>
-                    </div>
-                    <div class="student-batch-details">
-                      <p><i class="fa-regular fa-clock"></i> Mon, Wed, Fri • 5:00 PM - 6:30 PM</p>
-                      <p><i class="fa-solid fa-location-dot"></i> Model Town, North Delhi Center</p>
-                    </div>
-                    <div class="batch-actions">
-                      <button class="app-btn-sm primary"><i class="fa-solid fa-folder-open"></i> View Notes (14)</button>
-                      <button class="app-btn-sm outline"><i class="fa-solid fa-file-invoice"></i> Receipt</button>
-                    </div>
-                  </div>
-
-                  <div class="student-announcement-card">
-                    <div class="announcement-badge"><i class="fa-solid fa-bullhorn"></i> New Teacher Note</div>
-                    <h6>Electrostatics Formula Sheet & DPP-3</h6>
-                    <p class="announcement-meta">Uploaded by Rajesh Sir • 2.4 MB PDF</p>
-                  </div>
-                </div>
-
+              <!-- Role Switcher Pill Bar -->
+              <div class="preview-mode-bar hero-switcher-bar">
+                <button class="preview-mode-btn active" data-mockup="teacher">
+                  <i class="fa-solid fa-chalkboard-user"></i> Teacher View
+                </button>
+                <button class="preview-mode-btn" data-mockup="student">
+                  <i class="fa-solid fa-user-graduate"></i> Student View
+                </button>
               </div>
+
+              <!-- Real Teacher Dashboard Screen -->
+              <div class="mockup-content hero-screen-frame" id="teacherMockup">
+                <img src="assets/screenshots/Screenshot_20261020_143823.png" 
+                     alt="Tutin Teacher Dashboard Real App Screen" 
+                     class="hero-app-screen">
+              </div>
+
+              <!-- Real Student Home Screen -->
+              <div class="mockup-content hero-screen-frame hidden" id="studentMockup">
+                <img src="assets/screenshots/Screenshot_20261020_144150.png" 
+                     alt="Tutin Student Discovery Real App Screen" 
+                     class="hero-app-screen">
+              </div>
+
             </div>
 
           </div>
@@ -578,34 +478,9 @@
             </div>
 
             <div class="persona-visual-col">
-              <div class="illustration-card">
-                <img src="assets/illustrations/undraw_continuous-learning_a1ld.svg" alt="Tutor Management" class="persona-illustration">
-                
-                <div class="interactive-preview-card">
-                  <div class="ipc-header">
-                    <img src="assets/avatars/avatar_5.png" alt="Teacher" class="ipc-avatar">
-                    <div>
-                      <h5 class="ipc-name">Sunita Rao, B.Ed, M.Sc</h5>
-                      <span class="ipc-badge">Mathematics Specialist • 9 Yrs Exp</span>
-                    </div>
-                  </div>
-                  <div class="ipc-tags">
-                    <span>CBSE Class 10 & 12</span>
-                    <span>99.2% Pass Rate</span>
-                    <span>Indiranagar Center</span>
-                  </div>
-                  <div class="ipc-stat-row">
-                    <div>
-                      <span class="ipc-stat-num">4.9 ★</span>
-                      <span class="ipc-stat-sub">38 Reviews</span>
-                    </div>
-                    <div>
-                      <span class="ipc-stat-num">5 Batches</span>
-                      <span class="ipc-stat-sub">85 Students</span>
-                    </div>
-                    <button class="btn btn-sm btn-outline" id="demoShareCardBtn"><i class="fa-solid fa-share-nodes"></i> Share Card</button>
-                  </div>
-                </div>
+              <div class="persona-real-preview-card">
+                <div class="prp-badge"><i class="fa-solid fa-id-card"></i> Live Digital Profile Card</div>
+                <img src="assets/screenshots/Screenshot_20261020_143839.png" alt="Tutin Teacher Digital Visiting Card" class="persona-screen-image">
               </div>
             </div>
 
@@ -665,32 +540,9 @@
             </div>
 
             <div class="persona-visual-col">
-              <div class="illustration-card">
-                <img src="assets/illustrations/undraw_studying-science_kk9e.svg" alt="Student Learning" class="persona-illustration">
-                
-                <div class="interactive-preview-card student-card">
-                  <div class="ipc-header">
-                    <img src="assets/avatars/avatar_2.png" alt="Student" class="ipc-avatar">
-                    <div>
-                      <h5 class="ipc-name">Aarav Sharma</h5>
-                      <span class="ipc-badge">Class 12 CBSE • Science</span>
-                    </div>
-                  </div>
-                  <div class="student-status-box">
-                    <div class="ss-row">
-                      <span><i class="fa-solid fa-book"></i> Active Batches:</span>
-                      <strong>Physics & Math</strong>
-                    </div>
-                    <div class="ss-row">
-                      <span><i class="fa-regular fa-clock"></i> Next Session:</span>
-                      <strong>Today, 5:00 PM</strong>
-                    </div>
-                    <div class="ss-row">
-                      <span><i class="fa-solid fa-receipt"></i> Monthly Fee:</span>
-                      <strong class="text-success"><i class="fa-solid fa-check"></i> Paid & Receipt Saved</strong>
-                    </div>
-                  </div>
-                </div>
+              <div class="persona-real-preview-card">
+                <div class="prp-badge teal"><i class="fa-solid fa-qrcode"></i> 1-Second QR Code Admission</div>
+                <img src="assets/screenshots/Screenshot_20261020_144226.png" alt="Tutin Scan Batch QR Admission Screen" class="persona-screen-image">
               </div>
             </div>
 
@@ -754,32 +606,13 @@
                   </div>
                 </div>
                 <div class="panel-preview">
-                  <div class="interactive-mock-window">
-                    <div class="imw-header">
-                      <span class="imw-dot red"></span>
-                      <span class="imw-dot yellow"></span>
-                      <span class="imw-dot green"></span>
-                      <span class="imw-title">Tutin — Batch Manager</span>
+                  <div class="tour-screen-card">
+                    <div class="tsc-badge"><i class="fa-solid fa-users"></i> Live Batch Manager</div>
+                    <div class="tsc-frame">
+                      <img src="assets/screenshots/Screenshot_20261020_143953.png" alt="Tutin Batch Manager Real App Screen" class="tour-real-screenshot">
                     </div>
-                    <div class="imw-body">
-                      <div class="imw-batch-item">
-                        <div class="imw-b-title">Class 12 • Chemistry Crash Course</div>
-                        <div class="imw-b-meta">Mon, Wed, Fri (4:30 PM - 6:00 PM) • 26/30 Students</div>
-                        <div class="imw-b-progress">
-                          <div class="imw-prog-bar" style="width: 86%;"></div>
-                        </div>
-                      </div>
-                      <div class="imw-batch-item">
-                        <div class="imw-b-title">Class 10 • Mathematics Foundation</div>
-                        <div class="imw-b-meta">Tue, Thu, Sat (5:00 PM - 6:30 PM) • 32/35 Students</div>
-                        <div class="imw-b-progress">
-                          <div class="imw-prog-bar" style="width: 91%;"></div>
-                        </div>
-                      </div>
-                      <div class="imw-action-row">
-                        <button class="btn btn-sm btn-primary" id="imwAddBatchDemo"><i class="fa-solid fa-plus"></i> Create New Batch</button>
-                        <span class="imw-note"><i class="fa-solid fa-circle-info"></i> Code: <strong>MATH98</strong></span>
-                      </div>
+                    <div class="tsc-footer">
+                      <button class="btn btn-sm btn-primary" id="imwAddBatchDemo"><i class="fa-solid fa-plus"></i> Simulate Batch Wizard</button>
                     </div>
                   </div>
                 </div>
@@ -800,40 +633,13 @@
                   </div>
                 </div>
                 <div class="panel-preview">
-                  <div class="interactive-mock-window">
-                    <div class="imw-header">
-                      <span class="imw-dot red"></span>
-                      <span class="imw-dot yellow"></span>
-                      <span class="imw-dot green"></span>
-                      <span class="imw-title">Fee Ledger • October 2026</span>
+                  <div class="tour-screen-card">
+                    <div class="tsc-badge"><i class="fa-solid fa-receipt"></i> Monthly Fee Tracking</div>
+                    <div class="tsc-frame">
+                      <img src="assets/screenshots/Screenshot_20261020_143042.png" alt="Tutin Fee Tracking Real App Screen" class="tour-real-screenshot">
                     </div>
-                    <div class="imw-body">
-                      <div class="fee-roster-list">
-                        <div class="fee-row">
-                          <img src="assets/avatars/avatar_2.png" alt="Aarav" class="fee-avatar">
-                          <div class="fee-student">
-                            <strong>Aarav Sharma</strong>
-                            <span>Class 12 Physics • ₹2,500</span>
-                          </div>
-                          <span class="fee-pill paid"><i class="fa-solid fa-check"></i> Paid (Oct 04)</span>
-                        </div>
-                        <div class="fee-row">
-                          <img src="assets/avatars/avatar_3.png" alt="Rhea" class="fee-avatar">
-                          <div class="fee-student">
-                            <strong>Rhea Sen</strong>
-                            <span>Class 12 Physics • ₹2,500</span>
-                          </div>
-                          <span class="fee-pill paid"><i class="fa-solid fa-check"></i> Paid (Oct 06)</span>
-                        </div>
-                        <div class="fee-row">
-                          <img src="assets/avatars/avatar_4.png" alt="Kavya" class="fee-avatar">
-                          <div class="fee-student">
-                            <strong>Kavya Patel</strong>
-                            <span>Class 12 Physics • ₹2,500</span>
-                          </div>
-                          <button class="fee-pill pending-btn" id="demoMarkFeePaid"><i class="fa-solid fa-clock"></i> Mark as Paid</button>
-                        </div>
-                      </div>
+                    <div class="tsc-footer">
+                      <button class="fee-pill pending-btn" id="demoMarkFeePaid"><i class="fa-solid fa-clock"></i> Mark Student Paid</button>
                     </div>
                   </div>
                 </div>
@@ -854,28 +660,13 @@
                   </div>
                 </div>
                 <div class="panel-preview">
-                  <div class="digital-card-preview">
-                    <div class="dcp-cover">
-                      <span class="dcp-tag"><i class="fa-solid fa-certificate"></i> Verified Educator</span>
+                  <div class="tour-screen-card">
+                    <div class="tsc-badge"><i class="fa-solid fa-address-card"></i> Digital Visiting Card</div>
+                    <div class="tsc-frame">
+                      <img src="assets/screenshots/Screenshot_20261020_143839.png" alt="Tutin Digital Visiting Card Screen" class="tour-real-screenshot">
                     </div>
-                    <div class="dcp-body">
-                      <img src="assets/avatars/avatar_1.png" alt="Dr. Arvind" class="dcp-avatar">
-                      <h4 class="dcp-name">Dr. Arvind Kumar, Ph.D</h4>
-                      <p class="dcp-title">Senior Physics Faculty • 14+ Years Experience</p>
-                      <div class="dcp-badges">
-                        <span>CBSE</span>
-                        <span>ISC</span>
-                        <span>JEE Advanced</span>
-                        <span>NEET</span>
-                      </div>
-                      <div class="dcp-metrics">
-                        <div><strong>4.9 ★</strong><span>(64 Reviews)</span></div>
-                        <div><strong>450+</strong><span>Students Mentored</span></div>
-                      </div>
-                      <div class="dcp-actions">
-                        <button class="btn btn-sm btn-primary"><i class="fa-brands fa-whatsapp"></i> WhatsApp Me</button>
-                        <button class="btn btn-sm btn-outline"><i class="fa-solid fa-user-plus"></i> Request Demo</button>
-                      </div>
+                    <div class="tsc-footer">
+                      <button class="btn btn-sm btn-outline"><i class="fa-brands fa-whatsapp"></i> Share Visiting Card</button>
                     </div>
                   </div>
                 </div>
@@ -896,43 +687,89 @@
                   </div>
                 </div>
                 <div class="panel-preview">
-                  <div class="interactive-mock-window">
-                    <div class="imw-header">
-                      <span class="imw-dot red"></span>
-                      <span class="imw-dot yellow"></span>
-                      <span class="imw-dot green"></span>
-                      <span class="imw-title">Class 12 Batch Feed</span>
+                  <div class="tour-screen-card">
+                    <div class="tsc-badge"><i class="fa-solid fa-bullhorn"></i> Batch Announcements Feed</div>
+                    <div class="tsc-frame">
+                      <img src="assets/screenshots/Screenshot_20261020_144003.png" alt="Tutin Batch Updates Feed Screen" class="tour-real-screenshot">
                     </div>
-                    <div class="imw-body">
-                      <div class="feed-post-item">
-                        <div class="fpi-header">
-                          <span class="fpi-tag announcement"><i class="fa-solid fa-bullhorn"></i> Announcement</span>
-                          <span class="fpi-date">Today, 2:15 PM</span>
-                        </div>
-                        <h5>Unit Test 2 Scheduled for Next Monday</h5>
-                        <p>Syllabus includes Optics & Modern Physics. Bring your calculators and formula sheets.</p>
-                      </div>
-                      <div class="feed-post-item">
-                        <div class="fpi-header">
-                          <span class="fpi-tag resource"><i class="fa-solid fa-file-pdf"></i> Resource</span>
-                          <span class="fpi-date">Yesterday</span>
-                        </div>
-                        <h5>Optics Summary & Practice Sheet (DPP-4)</h5>
-                        <div class="fpi-download-card">
-                          <i class="fa-solid fa-file-pdf fa-2x text-danger"></i>
-                          <div>
-                            <strong>Optics_DPP_4_CBSE_2026.pdf</strong>
-                            <span>3.2 MB • Downloaded 24 times</span>
-                          </div>
-                          <button class="btn btn-sm btn-ghost"><i class="fa-solid fa-download"></i></button>
-                        </div>
-                      </div>
+                    <div class="tsc-footer">
+                      <button class="btn btn-sm btn-ghost"><i class="fa-solid fa-file-pdf"></i> PDF Homework Synced</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 7B. Native App Screens Gallery ───────────────────────── -->
+    <section class="app-gallery-section" id="app-gallery">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="badge-pill center">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Native Mobile Experience</span>
+          </div>
+          <h2 class="section-title">Built with Flutter for 60fps Native Speed</h2>
+          <p class="section-subtitle">
+            Every screen in Tutin is meticulously crafted to eliminate operational chaos for offline tuition teachers and simplify learning for students.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <!-- Card 1: Google Maps Center Pinning -->
+          <div class="gallery-card">
+            <div class="gallery-device">
+              <img src="assets/screenshots/Screenshot_20261020_143640.png" alt="Tuition Center Map Pinning Screen" class="gallery-screen-img">
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-badge"><i class="fa-solid fa-map-pin"></i> Hyperlocal Discovery</span>
+              <h4 class="gallery-title">Classroom Map Pinning</h4>
+              <p class="gallery-desc">Pin your physical tuition center on Google Maps so neighborhood parents can find and navigate directly to your classroom.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: 1-Second QR Code Admission -->
+          <div class="gallery-card">
+            <div class="gallery-device">
+              <img src="assets/screenshots/Screenshot_20261020_144226.png" alt="1-Second QR Admission Screen" class="gallery-screen-img">
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-badge"><i class="fa-solid fa-qrcode"></i> Instant Admission</span>
+              <h4 class="gallery-title">1-Second QR Admission</h4>
+              <p class="gallery-desc">Admit students instantly without manual typing. Students scan your printed batch QR code to request enrollment in 1 second.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Teacher Command Dashboard -->
+          <div class="gallery-card">
+            <div class="gallery-device">
+              <img src="assets/screenshots/Screenshot_20261020_143823.png" alt="Teacher Dashboard Screen" class="gallery-screen-img">
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-badge"><i class="fa-solid fa-chart-line"></i> Command Center</span>
+              <h4 class="gallery-title">Teacher Operations Hub</h4>
+              <p class="gallery-desc">Live metrics on active batches, pending admission requests, fee dues, and timetable schedule organized cleanly at a glance.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Hyperlocal Tutor Search -->
+          <div class="gallery-card">
+            <div class="gallery-device">
+              <img src="assets/screenshots/Screenshot_20261020_144210.png" alt="Tutor Search & Filtering Screen" class="gallery-screen-img">
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-badge"><i class="fa-solid fa-magnifying-glass"></i> Smart Search</span>
+              <h4 class="gallery-title">Tutor Search & Filters</h4>
+              <p class="gallery-desc">Students filter local tutors by exact subject, grade (9-12), board (CBSE/ICSE), and neighborhood distance with verified reviews.</p>
+            </div>
           </div>
 
         </div>
