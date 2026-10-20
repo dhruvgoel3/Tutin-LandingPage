@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutin — Your Digital Tuition Identity | All-in-One Platform for Tutors & Students</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Tutin is India's leading digital tuition identity platform. Effortlessly manage batches, track fees transparently, distribute study materials, and connect local tutors with students.">
+  <meta name="keywords" content="Tutin, tuition app, tutor management, coaching institute software, fee tracker, student batch app, local tutor discovery, digital teacher card">
+  <meta name="theme-color" content="#3730A3">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tutin — Your Digital Tuition Identity">
+  <meta property="og:description" content="Empowering independent tutors, coaching centers, students, and parents with smart batches, fee tracking, and local discovery.">
+  <meta property="og:image" content="assets/images/logo.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/tutin_logo_small.png">
+  <link rel="apple-touch-icon" href="assets/icons/app_icon.png">
+
+  <!-- Google Fonts fallback (Poppins & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glows -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- ── 1. Top Announcement Bar ───────────────────────────────── -->
+  <div class="top-announcement-bar">
+    <div class="container announcement-content">
+      <span class="announcement-pill">New</span>
+      <p><strong>Tutin 2.0 is live!</strong> Zero-commission fee tracking & shareable Digital Visiting Cards. <a href="#features" class="announcement-link">Explore features &rarr;</a></p>
+    </div>
+  </div>
+
+  <!-- ── 2. Navigation Header ─────────────────────────────────── -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" aria-label="Tutin Home">
+        <img src="assets/images/tutin_logo_text.png" alt="Tutin Logo" class="logo-image" onerror="this.onerror=null; this.src='assets/images/logo.png';">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#for-tutors" class="nav-link">For Tutors</a></li>
+          <li><a href="#for-students" class="nav-link">For Students</a></li>
+          <li><a href="#discovery" class="nav-link">Find Tutors</a></li>
+          <li><a href="#calculator" class="nav-link">Fee Calculator</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="header-actions">
+        <button class="btn btn-ghost" id="openTeacherModalBtn">
+          <i class="fa-solid fa-graduation-cap"></i> For Teachers
+        </button>
+        <button class="btn btn-primary" id="openDownloadModalBtn">
+          <i class="fa-solid fa-arrow-down-to-bracket"></i> Get Tutin App
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-links">
+          <li><a href="#features" class="mobile-link">Features</a></li>
+          <li><a href="#for-tutors" class="mobile-link">For Tutors</a></li>
+          <li><a href="#for-students" class="mobile-link">For Students</a></li>
+          <li><a href="#discovery" class="mobile-link">Find Tutors</a></li>
+          <li><a href="#calculator" class="mobile-link">Fee Calculator</a></li>
+          <li><a href="#testimonials" class="mobile-link">Reviews</a></li>
+          <li><a href="#faq" class="mobile-link">FAQ</a></li>
+        </ul>
+        <div class="mobile-drawer-cta">
+          <button class="btn btn-primary btn-block" id="mobileDownloadBtn">
+            <i class="fa-solid fa-download"></i> Download Tutin App
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── 3. Hero Section ──────────────────────────────────────── -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Left: Hero Text Column -->
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span class="badge-text">India's Smartest Tuition Ecosystem</span>
+          </div>
+
+          <h1 class="hero-title">
+            Your Digital Tuition Identity.<br>
+            <span class="text-gradient">Teaching Reimagined.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Say goodbye to chaotic WhatsApp groups and paper registers. Tutin gives independent tutors and coaching centers an all-in-one suite to run batches, track fees transparently, distribute study materials, and attract local students.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-lg" id="heroDownloadBtn">
+              <i class="fa-brands fa-google-play"></i> Get Started Free
+            </button>
+            <a href="#interactive-demo" class="btn btn-secondary btn-lg">
+              <i class="fa-solid fa-circle-play"></i> Explore Live Demo
+            </a>
+          </div>
+
+          <!-- Social Proof Cluster -->
+          <div class="hero-social-proof">
+            <div class="avatar-stack">
+              <img src="assets/avatars/avatar_1.png" alt="Tutor" class="avatar-img">
+              <img src="assets/avatars/avatar_2.png" alt="Student" class="avatar-img">
+              <img src="assets/avatars/avatar_3.png" alt="Tutor" class="avatar-img">
+              <img src="assets/avatars/avatar_4.png" alt="Parent" class="avatar-img">
+              <div class="avatar-count">+15k</div>
+            </div>
+            <div class="proof-text">
+              <div class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span class="rating-score">4.9 / 5</span>
+              </div>
+              <p class="proof-sub">Trusted by 10,000+ students & 1,200+ verified tutors</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Clean App Showcase Frame -->
+        <div class="hero-visual">
+          <div class="showcase-pedestal">
+            
+            <!-- Side Docked Status Pill (Top) -->
+            <div class="docked-card card-top-right">
+              <div class="docked-icon success"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="docked-info">
+                <strong>Fee Recorded</strong>
+                <span>₹3,000 received • Digital receipt sent</span>
+              </div>
+            </div>
+
+            <!-- Side Docked Status Pill (Bottom) -->
+            <div class="docked-card card-bottom-left">
+              <div class="docked-icon primary"><i class="fa-solid fa-qrcode"></i></div>
+              <div class="docked-info">
+                <strong>Instant QR Join</strong>
+                <span>Aarav admitted to Class 12 Physics</span>
+              </div>
+            </div>
+
+            <!-- Realistic Smartphone Mockup -->
+            <div class="phone-frame">
+              <!-- Speaker & Dynamic Island -->
+              <div class="phone-top-bar">
+                <span class="phone-time">9:41</span>
+                <div class="phone-island"></div>
+                <div class="phone-indicators">
+                  <i class="fa-solid fa-signal"></i>
+                  <i class="fa-solid fa-wifi"></i>
+                  <i class="fa-solid fa-battery-full"></i>
+                </div>
+              </div>
+              
+              <!-- App Screen UI -->
+              <div class="phone-screen">
+                
+                <!-- Screen Header -->
+                <div class="app-screen-header">
+                  <div class="user-greeting">
+                    <img src="assets/avatars/avatar_1.png" alt="Rajesh Sharma" class="user-avatar">
+                    <div>
+                      <span class="app-subtitle">Welcome back</span>
+                      <h4 class="app-title">Rajesh Sharma, M.Sc</h4>
+                    </div>
+                  </div>
+                  <span class="role-pill"><i class="fa-solid fa-shield-check"></i> Verified</span>
+                </div>
+
+                <!-- Live Switcher inside App Preview -->
+                <div class="preview-mode-bar">
+                  <button class="preview-mode-btn active" data-mockup="teacher">Teacher View</button>
+                  <button class="preview-mode-btn" data-mockup="student">Student View</button>
+                </div>
+
+                <!-- Teacher App View -->
+                <div class="mockup-content" id="teacherMockup">
+                  <!-- Stats Row -->
+                  <div class="app-stats-grid">
+                    <div class="app-stat-card">
+                      <span class="stat-label">Active Batches</span>
+                      <span class="stat-value">4 Batches</span>
+                    </div>
+                    <div class="app-stat-card">
+                      <span class="stat-label">Total Students</span>
+                      <span class="stat-value">68 Enrolled</span>
+                    </div>
+                    <div class="app-stat-card full-width highlight-card">
+                      <div class="stat-split">
+                        <div>
+                          <span class="stat-label">October Fee Collections</span>
+                          <span class="stat-value primary-color">₹94,000</span>
+                        </div>
+                        <span class="stat-tag success"><i class="fa-solid fa-arrow-trend-up"></i> 92% Collected</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Active Batch Card -->
+                  <div class="app-batch-card">
+                    <div class="batch-header">
+                      <div>
+                        <span class="batch-subject">Physics • Class 12 CBSE</span>
+                        <h5 class="batch-name">Target Board & JEE Main 2026</h5>
+                      </div>
+                      <span class="batch-time-pill"><i class="fa-regular fa-clock"></i> 5:00 PM</span>
+                    </div>
+                    <div class="batch-meta">
+                      <span><i class="fa-solid fa-user-group"></i> 28 / 30 Students</span>
+                      <span><i class="fa-solid fa-calendar-days"></i> Mon, Wed, Fri</span>
+                    </div>
+                    <div class="batch-actions">
+                      <button class="app-btn-sm primary"><i class="fa-solid fa-qrcode"></i> Show QR</button>
+                      <button class="app-btn-sm outline"><i class="fa-solid fa-receipt"></i> Fees</button>
+                      <button class="app-btn-sm outline"><i class="fa-solid fa-book-open"></i> Notes</button>
+                    </div>
+                  </div>
+
+                  <!-- Join Request Notification -->
+                  <div class="app-notification-card">
+                    <div class="notif-header">
+                      <i class="fa-solid fa-bell"></i>
+                      <span>New Join Request</span>
+                    </div>
+                    <p class="notif-text"><strong>Rohan Verma</strong> requested admission to Chemistry Batch</p>
+                    <div class="notif-actions">
+                      <button class="notif-btn accept">Accept</button>
+                      <button class="notif-btn decline">Decline</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Student App View (Hidden by default) -->
+                <div class="mockup-content hidden" id="studentMockup">
+                  <div class="student-welcome-banner">
+                    <h5>Class 12 Boards • Science Stream</h5>
+                    <p>3 Enrolled Batches • Today's class at 5:00 PM</p>
+                  </div>
+
+                  <div class="student-batch-card">
+                    <div class="batch-header">
+                      <div>
+                        <span class="batch-subject">Advanced Physics</span>
+                        <h5 class="batch-name">Prof. Rajesh Sharma</h5>
+                      </div>
+                      <span class="badge-status-paid"><i class="fa-solid fa-check"></i> Fee Paid</span>
+                    </div>
+                    <div class="student-batch-details">
+                      <p><i class="fa-regular fa-clock"></i> Mon, Wed, Fri • 5:00 PM - 6:30 PM</p>
+                      <p><i class="fa-solid fa-location-dot"></i> Model Town, North Delhi Center</p>
+                    </div>
+                    <div class="batch-actions">
+                      <button class="app-btn-sm primary"><i class="fa-solid fa-folder-open"></i> View Notes (14)</button>
+                      <button class="app-btn-sm outline"><i class="fa-solid fa-file-invoice"></i> Receipt</button>
+                    </div>
+                  </div>
+
+                  <div class="student-announcement-card">
+                    <div class="announcement-badge"><i class="fa-solid fa-bullhorn"></i> New Teacher Note</div>
+                    <h6>Electrostatics Formula Sheet & DPP-3</h6>
+                    <p class="announcement-meta">Uploaded by Rajesh Sir • 2.4 MB PDF</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 4. Metrics & Trust Cards ──────────────────────────────── -->
+    <section class="metrics-banner">
+      <div class="container">
+        
+        <div class="metrics-grid">
+          
+          <div class="metric-card">
+            <div class="metric-icon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <div>
+              <span class="metric-number">1,200+</span>
+              <span class="metric-label">Verified Tutors</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box"><i class="fa-solid fa-user-graduate"></i></div>
+            <div>
+              <span class="metric-number">25,000+</span>
+              <span class="metric-label">Active Students</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box"><i class="fa-solid fa-receipt"></i></div>
+            <div>
+              <span class="metric-number">98.5%</span>
+              <span class="metric-label">On-Time Fee Clarity</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box success"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <div>
+              <span class="metric-number">0% Cut</span>
+              <span class="metric-label">100% Commission-Free</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Board Trust Ribbon -->
+        <div class="brand-trust-row">
+          <p class="trust-heading">Trusted across premier boards & educational hubs</p>
+          <div class="board-badges-list">
+            <span class="board-chip"><i class="fa-solid fa-award"></i> CBSE</span>
+            <span class="board-chip"><i class="fa-solid fa-award"></i> ICSE</span>
+            <span class="board-chip"><i class="fa-solid fa-award"></i> HBSE</span>
+            <span class="board-chip"><i class="fa-solid fa-award"></i> UP Board</span>
+            <span class="board-chip"><i class="fa-solid fa-award"></i> Maharashtra Board</span>
+            <span class="board-chip"><i class="fa-solid fa-location-dot"></i> Delhi NCR</span>
+            <span class="board-chip"><i class="fa-solid fa-location-dot"></i> Bangalore</span>
+            <span class="board-chip"><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+            <span class="board-chip"><i class="fa-solid fa-location-dot"></i> Jaipur</span>
+            <span class="board-chip"><i class="fa-solid fa-location-dot"></i> Chandigarh</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 5. Features Bento Grid ───────────────────────────────── -->
+    <section class="features-section" id="features">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="badge-pill center">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Power-Packed Platform</span>
+          </div>
+          <h2 class="section-title">Everything You Need to Run Tuitions Flawlessly</h2>
+          <p class="section-subtitle">
+            Built specifically around the real daily workflows of Indian private tutors, coaching centers, and students.
+          </p>
+        </div>
+
+        <!-- Bento Grid Structure -->
+        <div class="bento-grid">
+          
+          <!-- Bento 1: Wide Featured Card -->
+          <div class="bento-card bento-wide">
+            <div class="bento-content">
+              <div class="feature-card-icon"><i class="fa-solid fa-users-gear"></i></div>
+              <h3 class="feature-card-title">Smart Batch Rosters & Scheduling</h3>
+              <p class="feature-card-text">
+                Create unlimited batches with custom days, timings, student capacities, and subjects. Manage join requests with a single tap.
+              </p>
+              <div class="bento-tags-row">
+                <span class="bento-tag"><i class="fa-solid fa-check text-success"></i> Mon-Sun custom schedules</span>
+                <span class="bento-tag"><i class="fa-solid fa-check text-success"></i> 6-digit codes & QR joining</span>
+                <span class="bento-tag"><i class="fa-solid fa-check text-success"></i> Capacity caps & approvals</span>
+              </div>
+            </div>
+            <div class="bento-visual">
+              <div class="mini-roster-card">
+                <div class="mrc-header">
+                  <strong>Class 12 • Chemistry Sprint</strong>
+                  <span class="mrc-badge">26/30 Students</span>
+                </div>
+                <div class="mrc-bar"><div class="mrc-fill" style="width: 86%;"></div></div>
+                <div class="mrc-footer">
+                  <span>Mon, Wed, Fri • 4:30 PM</span>
+                  <span class="mrc-code">Code: <strong>CHEM26</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 2: Wide Featured Card -->
+          <div class="bento-card bento-wide highlight">
+            <div class="bento-content">
+              <div class="feature-card-icon"><i class="fa-solid fa-receipt"></i></div>
+              <h3 class="feature-card-title">Transparent Fee Cycles & Digital Receipts</h3>
+              <p class="feature-card-text">
+                Track monthly fee cycles effortlessly. Mark paid, partial, or pending statuses, and eliminate awkward fee reminder conversations with polite automated alerts.
+              </p>
+              <div class="bento-tags-row">
+                <span class="bento-tag"><i class="fa-solid fa-check text-success"></i> Automated monthly cycles</span>
+                <span class="bento-tag"><i class="fa-solid fa-check text-success"></i> Instant digital receipts</span>
+                <span class="bento-tag"><i class="fa-solid fa-check text-success"></i> 100% Commission-free</span>
+              </div>
+            </div>
+            <div class="bento-visual">
+              <div class="mini-receipt-preview">
+                <div class="mrp-row">
+                  <span class="mrp-label">October Fee Receipt</span>
+                  <span class="badge-status-paid"><i class="fa-solid fa-check"></i> Paid</span>
+                </div>
+                <div class="mrp-amount">₹3,000</div>
+                <div class="mrp-sub">Priya Nair • Class 12 Advanced Physics</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 3: Teacher Profile Card -->
+          <div class="bento-card">
+            <div class="feature-card-icon"><i class="fa-solid fa-id-badge"></i></div>
+            <h3 class="feature-card-title">Digital Visiting Card</h3>
+            <p class="feature-card-text">
+              A shareable web link (<code>tutin.app/teacher/id</code>) showcasing your qualifications, demo videos, and student results.
+            </p>
+            <ul class="feature-checklist">
+              <li><i class="fa-solid fa-check"></i> Personal web link & QR card</li>
+              <li><i class="fa-solid fa-check"></i> Embed YouTube lecture demos</li>
+            </ul>
+          </div>
+
+          <!-- Bento 4: Local Tutor Discovery -->
+          <div class="bento-card">
+            <div class="feature-card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3 class="feature-card-title">Local Tutor Discovery</h3>
+            <p class="feature-card-text">
+              Help students in your neighborhood find your classes by filtering by board, class level, and subject expertise.
+            </p>
+            <ul class="feature-checklist">
+              <li><i class="fa-solid fa-check"></i> City & distance-based search</li>
+              <li><i class="fa-solid fa-check"></i> Google Maps tuition center pin</li>
+            </ul>
+          </div>
+
+          <!-- Bento 5: Notes & Hub -->
+          <div class="bento-card">
+            <div class="feature-card-icon"><i class="fa-solid fa-folder-tree"></i></div>
+            <h3 class="feature-card-title">Batch Notes & PDFs</h3>
+            <p class="feature-card-text">
+              Share lecture slides, formula sheets, revision PDFs, and announcements securely with enrolled batch members only.
+            </p>
+            <ul class="feature-checklist">
+              <li><i class="fa-solid fa-check"></i> Organized by batch & subject</li>
+              <li><i class="fa-solid fa-check"></i> Private cloud storage up to 10MB</li>
+            </ul>
+          </div>
+
+          <!-- Bento 6: Verified Reviews -->
+          <div class="bento-card">
+            <div class="feature-card-icon"><i class="fa-solid fa-award"></i></div>
+            <h3 class="feature-card-title">Verified Student Reviews</h3>
+            <p class="feature-card-text">
+              Collect authenticated testimonials from students you actually taught to build genuine credibility and trust.
+            </p>
+            <ul class="feature-checklist">
+              <li><i class="fa-solid fa-check"></i> Only verified students can review</li>
+              <li><i class="fa-solid fa-check"></i> Display on your digital card</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 6. Dual Persona Section ──────────────────────────────── -->
+    <section class="persona-section" id="for-tutors">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="badge-pill center">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Designed for Educators & Learners</span>
+          </div>
+          <h2 class="section-title">Built Specially for Both Sides of Tuition</h2>
+          <p class="section-subtitle">
+            Whether you run private coaching or you're a student aiming for top board ranks, Tutin gives you the exact tools you need.
+          </p>
+
+          <!-- Toggle Pills -->
+          <div class="persona-toggle-container">
+            <button class="persona-toggle-btn active" id="btnForTutors" data-persona="tutors">
+              <i class="fa-solid fa-chalkboard-user"></i> For Tutors & Coaching Institutes
+            </button>
+            <button class="persona-toggle-btn" id="btnForStudents" data-persona="students">
+              <i class="fa-solid fa-user-graduate"></i> For Students & Parents
+            </button>
+          </div>
+        </div>
+
+        <!-- Tutors Content Block -->
+        <div class="persona-block active" id="tutorsBlock">
+          <div class="persona-content-grid">
+            
+            <div class="persona-text-col">
+              <span class="persona-kicker">Professionalize Your Teaching</span>
+              <h3 class="persona-heading">Turn your tuition into an organized, recognized digital brand.</h3>
+              <p class="persona-desc">
+                Stop juggling paper registers, unpaid fees, and cluttered chats. Tutin streamlines your private tuition operations from admission to digital receipts.
+              </p>
+
+              <div class="persona-features-list">
+                <div class="persona-feature-item">
+                  <div class="feature-icon-box"><i class="fa-solid fa-id-card"></i></div>
+                  <div>
+                    <h4>Shareable Digital Profile Card</h4>
+                    <p>Get your own public web link (<code>tutin.app/teacher/your-name</code>) to share with prospective parents showcasing qualifications, demo lectures, and reviews.</p>
+                  </div>
+                </div>
+
+                <div class="persona-feature-item">
+                  <div class="feature-icon-box"><i class="fa-solid fa-qrcode"></i></div>
+                  <div>
+                    <h4>1-Second QR Code Admission</h4>
+                    <p>Admit new students without awkward manual typing. Display your batch QR code in your tuition room or send a 6-character code.</p>
+                  </div>
+                </div>
+
+                <div class="persona-feature-item">
+                  <div class="feature-icon-box"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                  <div>
+                    <h4>Automated Fee Tracking & Receipts</h4>
+                    <p>Mark monthly fees as Paid or Pending with a single tap. Generate branded digital receipts automatically for parents.</p>
+                  </div>
+                </div>
+
+                <div class="persona-feature-item">
+                  <div class="feature-icon-box"><i class="fa-solid fa-star"></i></div>
+                  <div>
+                    <h4>Verified Student Testimonials</h4>
+                    <p>Collect authentic reviews from enrolled students that prove your results and help attract more students in your locality.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="persona-cta-wrap">
+                <button class="btn btn-primary" id="ctaTeacherJoin">
+                  <i class="fa-solid fa-user-plus"></i> Create Your Teacher Profile
+                </button>
+              </div>
+            </div>
+
+            <div class="persona-visual-col">
+              <div class="illustration-card">
+                <img src="assets/illustrations/undraw_continuous-learning_a1ld.svg" alt="Tutor Management" class="persona-illustration">
+                
+                <div class="interactive-preview-card">
+                  <div class="ipc-header">
+                    <img src="assets/avatars/avatar_5.png" alt="Teacher" class="ipc-avatar">
+                    <div>
+                      <h5 class="ipc-name">Sunita Rao, B.Ed, M.Sc</h5>
+                      <span class="ipc-badge">Mathematics Specialist • 9 Yrs Exp</span>
+                    </div>
+                  </div>
+                  <div class="ipc-tags">
+                    <span>CBSE Class 10 & 12</span>
+                    <span>99.2% Pass Rate</span>
+                    <span>Indiranagar Center</span>
+                  </div>
+                  <div class="ipc-stat-row">
+                    <div>
+                      <span class="ipc-stat-num">4.9 ★</span>
+                      <span class="ipc-stat-sub">38 Reviews</span>
+                    </div>
+                    <div>
+                      <span class="ipc-stat-num">5 Batches</span>
+                      <span class="ipc-stat-sub">85 Students</span>
+                    </div>
+                    <button class="btn btn-sm btn-outline" id="demoShareCardBtn"><i class="fa-solid fa-share-nodes"></i> Share Card</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Students & Parents Content Block -->
+        <div class="persona-block hidden" id="studentsBlock">
+          <div class="persona-content-grid">
+            
+            <div class="persona-text-col">
+              <span class="persona-kicker">Find, Learn & Excel</span>
+              <h3 class="persona-heading">Find trusted tutors nearby and stay completely on top of classes.</h3>
+              <p class="persona-desc">
+                No more relying on unverified neighborhood rumors. Discover the highest-rated local teachers with transparent details, verified credentials, and real student feedback.
+              </p>
+
+              <div class="persona-features-list">
+                <div class="persona-feature-item">
+                  <div class="feature-icon-box teal"><i class="fa-solid fa-magnifying-glass-location"></i></div>
+                  <div>
+                    <h4>Hyperlocal Tutor Search</h4>
+                    <p>Filter teachers by exact subject, class level, education board, and neighborhood distance from your home.</p>
+                  </div>
+                </div>
+
+                <div class="persona-feature-item">
+                  <div class="feature-icon-box teal"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                  <div>
+                    <h4>Transparent Fee Passbook for Parents</h4>
+                    <p>Parents get real-time visibility into monthly tuition fee dues, receipts, and payment logs without any confusion.</p>
+                  </div>
+                </div>
+
+                <div class="persona-feature-item">
+                  <div class="feature-icon-box teal"><i class="fa-solid fa-book-bookmark"></i></div>
+                  <div>
+                    <h4>Batch Notes & Announcements Feed</h4>
+                    <p>Access notes, homework, test schedules, and revision materials shared directly by your tutor in one central feed.</p>
+                  </div>
+                </div>
+
+                <div class="persona-feature-item">
+                  <div class="feature-icon-box teal"><i class="fa-solid fa-circle-check"></i></div>
+                  <div>
+                    <h4>Genuine Reviews by Real Students</h4>
+                    <p>Only enrolled students who took classes can write testimonials, ensuring 100% authentic ratings you can trust.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="persona-cta-wrap">
+                <a href="#discovery" class="btn btn-secondary">
+                  <i class="fa-solid fa-magnifying-glass"></i> Search Tutors Near You
+                </a>
+              </div>
+            </div>
+
+            <div class="persona-visual-col">
+              <div class="illustration-card">
+                <img src="assets/illustrations/undraw_studying-science_kk9e.svg" alt="Student Learning" class="persona-illustration">
+                
+                <div class="interactive-preview-card student-card">
+                  <div class="ipc-header">
+                    <img src="assets/avatars/avatar_2.png" alt="Student" class="ipc-avatar">
+                    <div>
+                      <h5 class="ipc-name">Aarav Sharma</h5>
+                      <span class="ipc-badge">Class 12 CBSE • Science</span>
+                    </div>
+                  </div>
+                  <div class="student-status-box">
+                    <div class="ss-row">
+                      <span><i class="fa-solid fa-book"></i> Active Batches:</span>
+                      <strong>Physics & Math</strong>
+                    </div>
+                    <div class="ss-row">
+                      <span><i class="fa-regular fa-clock"></i> Next Session:</span>
+                      <strong>Today, 5:00 PM</strong>
+                    </div>
+                    <div class="ss-row">
+                      <span><i class="fa-solid fa-receipt"></i> Monthly Fee:</span>
+                      <strong class="text-success"><i class="fa-solid fa-check"></i> Paid & Receipt Saved</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 7. Interactive App Tour ──────────────────────────────── -->
+    <section class="tour-section" id="interactive-demo">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="badge-pill center">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Interactive Showcase</span>
+          </div>
+          <h2 class="section-title">Experience How Tutin Works</h2>
+          <p class="section-subtitle">
+            Click through the tabs below to preview the actual screens and workflows tutors and students love.
+          </p>
+        </div>
+
+        <div class="tour-container">
+          
+          <!-- Segmented Pill Tabs -->
+          <div class="tour-tabs-nav" role="tablist">
+            <button class="tour-tab-btn active" data-tab="tab-batches" role="tab">
+              <i class="fa-solid fa-users"></i>
+              <span>Smart Batches</span>
+            </button>
+            <button class="tour-tab-btn" data-tab="tab-fees" role="tab">
+              <i class="fa-solid fa-receipt"></i>
+              <span>Fee Tracking</span>
+            </button>
+            <button class="tour-tab-btn" data-tab="tab-profile" role="tab">
+              <i class="fa-solid fa-address-card"></i>
+              <span>Teacher Visiting Card</span>
+            </button>
+            <button class="tour-tab-btn" data-tab="tab-materials" role="tab">
+              <i class="fa-solid fa-book"></i>
+              <span>Study Materials</span>
+            </button>
+          </div>
+
+          <!-- Tour Tab Panels -->
+          <div class="tour-panels-container">
+            
+            <!-- Panel 1: Smart Batches -->
+            <div class="tour-panel active" id="tab-batches">
+              <div class="panel-layout">
+                <div class="panel-text">
+                  <span class="panel-badge">Batch Management</span>
+                  <h3>Complete Roster & Schedule Control</h3>
+                  <p>Organize multiple classes without scheduling conflicts. Set batch limits, select weekly teaching days, and control admissions with one click.</p>
+                  <div class="panel-feature-list">
+                    <div class="pfi"><i class="fa-solid fa-qrcode text-primary"></i> <strong>Instant QR Admission:</strong> Put a QR code outside your tuition room. Students scan and request to join instantly.</div>
+                    <div class="pfi"><i class="fa-solid fa-shield-halved text-primary"></i> <strong>Admission Approvals:</strong> You choose who enters your batch. Accept or decline join requests on your terms.</div>
+                    <div class="pfi"><i class="fa-solid fa-clock text-primary"></i> <strong>Automated Reminders:</strong> Batch timings automatically reflect in students' daily schedules.</div>
+                  </div>
+                </div>
+                <div class="panel-preview">
+                  <div class="interactive-mock-window">
+                    <div class="imw-header">
+                      <span class="imw-dot red"></span>
+                      <span class="imw-dot yellow"></span>
+                      <span class="imw-dot green"></span>
+                      <span class="imw-title">Tutin — Batch Manager</span>
+                    </div>
+                    <div class="imw-body">
+                      <div class="imw-batch-item">
+                        <div class="imw-b-title">Class 12 • Chemistry Crash Course</div>
+                        <div class="imw-b-meta">Mon, Wed, Fri (4:30 PM - 6:00 PM) • 26/30 Students</div>
+                        <div class="imw-b-progress">
+                          <div class="imw-prog-bar" style="width: 86%;"></div>
+                        </div>
+                      </div>
+                      <div class="imw-batch-item">
+                        <div class="imw-b-title">Class 10 • Mathematics Foundation</div>
+                        <div class="imw-b-meta">Tue, Thu, Sat (5:00 PM - 6:30 PM) • 32/35 Students</div>
+                        <div class="imw-b-progress">
+                          <div class="imw-prog-bar" style="width: 91%;"></div>
+                        </div>
+                      </div>
+                      <div class="imw-action-row">
+                        <button class="btn btn-sm btn-primary" id="imwAddBatchDemo"><i class="fa-solid fa-plus"></i> Create New Batch</button>
+                        <span class="imw-note"><i class="fa-solid fa-circle-info"></i> Code: <strong>MATH98</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Fee Tracking -->
+            <div class="tour-panel hidden" id="tab-fees">
+              <div class="panel-layout">
+                <div class="panel-text">
+                  <span class="panel-badge">Transparent Accounting</span>
+                  <h3>Effortless Monthly Fee Register</h3>
+                  <p>Never write manual paper receipts or remember who paid and who is pending. Tutin gives you a crystal-clear financial overview every month.</p>
+                  <div class="panel-feature-list">
+                    <div class="pfi"><i class="fa-solid fa-check-circle text-success"></i> <strong>Tap to Mark Paid:</strong> Toggle student status with a single click.</div>
+                    <div class="pfi"><i class="fa-solid fa-file-pdf text-primary"></i> <strong>Instant Digital Receipts:</strong> Auto-generated professional receipts with date, batch, and teacher signature.</div>
+                    <div class="pfi"><i class="fa-brands fa-whatsapp text-success"></i> <strong>WhatsApp Notification:</strong> Send polite payment confirmations and receipts directly on WhatsApp.</div>
+                  </div>
+                </div>
+                <div class="panel-preview">
+                  <div class="interactive-mock-window">
+                    <div class="imw-header">
+                      <span class="imw-dot red"></span>
+                      <span class="imw-dot yellow"></span>
+                      <span class="imw-dot green"></span>
+                      <span class="imw-title">Fee Ledger • October 2026</span>
+                    </div>
+                    <div class="imw-body">
+                      <div class="fee-roster-list">
+                        <div class="fee-row">
+                          <img src="assets/avatars/avatar_2.png" alt="Aarav" class="fee-avatar">
+                          <div class="fee-student">
+                            <strong>Aarav Sharma</strong>
+                            <span>Class 12 Physics • ₹2,500</span>
+                          </div>
+                          <span class="fee-pill paid"><i class="fa-solid fa-check"></i> Paid (Oct 04)</span>
+                        </div>
+                        <div class="fee-row">
+                          <img src="assets/avatars/avatar_3.png" alt="Rhea" class="fee-avatar">
+                          <div class="fee-student">
+                            <strong>Rhea Sen</strong>
+                            <span>Class 12 Physics • ₹2,500</span>
+                          </div>
+                          <span class="fee-pill paid"><i class="fa-solid fa-check"></i> Paid (Oct 06)</span>
+                        </div>
+                        <div class="fee-row">
+                          <img src="assets/avatars/avatar_4.png" alt="Kavya" class="fee-avatar">
+                          <div class="fee-student">
+                            <strong>Kavya Patel</strong>
+                            <span>Class 12 Physics • ₹2,500</span>
+                          </div>
+                          <button class="fee-pill pending-btn" id="demoMarkFeePaid"><i class="fa-solid fa-clock"></i> Mark as Paid</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Teacher Visiting Card -->
+            <div class="tour-panel hidden" id="tab-profile">
+              <div class="panel-layout">
+                <div class="panel-text">
+                  <span class="panel-badge">Digital Brand</span>
+                  <h3>Your Personal Digital Visiting Card</h3>
+                  <p>Every tutor on Tutin gets an elegant web link (e.g. <code>tutin.app/teacher/arvind-physics</code>) to showcase credentials, student results, and lecture demo videos.</p>
+                  <div class="panel-feature-list">
+                    <div class="pfi"><i class="fa-solid fa-link text-primary"></i> <strong>Share Anywhere:</strong> Put your link in WhatsApp status, bio, and parent messages.</div>
+                    <div class="pfi"><i class="fa-brands fa-youtube text-danger"></i> <strong>YouTube Demo Lectures:</strong> Embed your sample teaching videos to showcase teaching methodology.</div>
+                    <div class="pfi"><i class="fa-solid fa-location-dot text-primary"></i> <strong>Center Navigation:</strong> Parents can navigate directly to your classroom via Google Maps.</div>
+                  </div>
+                </div>
+                <div class="panel-preview">
+                  <div class="digital-card-preview">
+                    <div class="dcp-cover">
+                      <span class="dcp-tag"><i class="fa-solid fa-certificate"></i> Verified Educator</span>
+                    </div>
+                    <div class="dcp-body">
+                      <img src="assets/avatars/avatar_1.png" alt="Dr. Arvind" class="dcp-avatar">
+                      <h4 class="dcp-name">Dr. Arvind Kumar, Ph.D</h4>
+                      <p class="dcp-title">Senior Physics Faculty • 14+ Years Experience</p>
+                      <div class="dcp-badges">
+                        <span>CBSE</span>
+                        <span>ISC</span>
+                        <span>JEE Advanced</span>
+                        <span>NEET</span>
+                      </div>
+                      <div class="dcp-metrics">
+                        <div><strong>4.9 ★</strong><span>(64 Reviews)</span></div>
+                        <div><strong>450+</strong><span>Students Mentored</span></div>
+                      </div>
+                      <div class="dcp-actions">
+                        <button class="btn btn-sm btn-primary"><i class="fa-brands fa-whatsapp"></i> WhatsApp Me</button>
+                        <button class="btn btn-sm btn-outline"><i class="fa-solid fa-user-plus"></i> Request Demo</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: Study Materials -->
+            <div class="tour-panel hidden" id="tab-materials">
+              <div class="panel-layout">
+                <div class="panel-text">
+                  <span class="panel-badge">Resource Hub</span>
+                  <h3>Centralized Study Notes & Updates Feed</h3>
+                  <p>No more students losing important worksheets in WhatsApp chats. Keep assignments, revision formulas, and test schedules clean and accessible.</p>
+                  <div class="panel-feature-list">
+                    <div class="pfi"><i class="fa-solid fa-file-pdf text-danger"></i> <strong>PDF & Document Sharing:</strong> Fast cloud uploads for revision notes and assignments.</div>
+                    <div class="pfi"><i class="fa-solid fa-lock text-primary"></i> <strong>Protected Content:</strong> Only enrolled batch students can view and download materials.</div>
+                    <div class="pfi"><i class="fa-solid fa-bell text-warning"></i> <strong>Instant Alerts:</strong> Students get notified whenever you post an announcement.</div>
+                  </div>
+                </div>
+                <div class="panel-preview">
+                  <div class="interactive-mock-window">
+                    <div class="imw-header">
+                      <span class="imw-dot red"></span>
+                      <span class="imw-dot yellow"></span>
+                      <span class="imw-dot green"></span>
+                      <span class="imw-title">Class 12 Batch Feed</span>
+                    </div>
+                    <div class="imw-body">
+                      <div class="feed-post-item">
+                        <div class="fpi-header">
+                          <span class="fpi-tag announcement"><i class="fa-solid fa-bullhorn"></i> Announcement</span>
+                          <span class="fpi-date">Today, 2:15 PM</span>
+                        </div>
+                        <h5>Unit Test 2 Scheduled for Next Monday</h5>
+                        <p>Syllabus includes Optics & Modern Physics. Bring your calculators and formula sheets.</p>
+                      </div>
+                      <div class="feed-post-item">
+                        <div class="fpi-header">
+                          <span class="fpi-tag resource"><i class="fa-solid fa-file-pdf"></i> Resource</span>
+                          <span class="fpi-date">Yesterday</span>
+                        </div>
+                        <h5>Optics Summary & Practice Sheet (DPP-4)</h5>
+                        <div class="fpi-download-card">
+                          <i class="fa-solid fa-file-pdf fa-2x text-danger"></i>
+                          <div>
+                            <strong>Optics_DPP_4_CBSE_2026.pdf</strong>
+                            <span>3.2 MB • Downloaded 24 times</span>
+                          </div>
+                          <button class="btn btn-sm btn-ghost"><i class="fa-solid fa-download"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 8. Live Tutor Discovery Section ──────────────────────── -->
+    <section class="discovery-section" id="discovery">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="badge-pill center">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Find Top Educators</span>
+          </div>
+          <h2 class="section-title">Discover Verified Tutors Near You</h2>
+          <p class="section-subtitle">
+            Filter by city, board, class, and subject to find experienced teachers in your neighborhood.
+          </p>
+        </div>
+
+        <!-- Unified Capsule Search Bar -->
+        <div class="search-filter-card">
+          <div class="filter-controls-grid">
+            
+            <div class="filter-group">
+              <label for="citySelect"><i class="fa-solid fa-location-dot"></i> City</label>
+              <select id="citySelect" class="form-select">
+                <option value="all">All Cities</option>
+                <option value="Delhi">Delhi NCR</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Pune">Pune</option>
+                <option value="Lucknow">Lucknow</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="boardSelect"><i class="fa-solid fa-graduation-cap"></i> Board</label>
+              <select id="boardSelect" class="form-select">
+                <option value="all">All Boards</option>
+                <option value="CBSE">CBSE</option>
+                <option value="ICSE">ICSE</option>
+                <option value="HBSE">HBSE</option>
+                <option value="State Board">State Board</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="classSelect"><i class="fa-solid fa-layer-group"></i> Class</label>
+              <select id="classSelect" class="form-select">
+                <option value="all">All Classes</option>
+                <option value="Class 12">Class 12</option>
+                <option value="Class 11">Class 11</option>
+                <option value="Class 10">Class 10</option>
+                <option value="Class 9">Class 9</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="subjectSelect"><i class="fa-solid fa-book"></i> Subject</label>
+              <select id="subjectSelect" class="form-select">
+                <option value="all">All Subjects</option>
+                <option value="Physics">Physics</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Commerce">Accountancy & Business</option>
+              </select>
+            </div>
+
+            <div class="filter-group button-group">
+              <button class="btn btn-primary btn-block" id="applyFilterBtn">
+                <i class="fa-solid fa-magnifying-glass"></i> Search Tutors
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Dynamic Results Grid (Balanced 6-Card Grid) -->
+        <div class="tutors-result-grid" id="tutorsResultGrid">
+          <!-- Populated by script.js -->
+        </div>
+
+        <div class="discovery-footer-cta">
+          <p>Are you an educator looking to connect with local students?</p>
+          <button class="btn btn-outline" id="tutorListYourselfBtn">
+            <i class="fa-solid fa-plus"></i> List Your Tuition on Tutin
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 9. Fee & Time Savings Calculator ─────────────────────── -->
+    <section class="calculator-section" id="calculator">
+      <div class="container">
+        
+        <div class="calc-wrapper">
+          <div class="calc-info-col">
+            <div class="badge-pill">
+              <span class="badge-dot"></span>
+              <span class="badge-text">Tutor ROI Calculator</span>
+            </div>
+            <h2 class="calc-title">How Much Time & Money Will Tutin Save You?</h2>
+            <p class="calc-subtitle">
+              Most independent tutors lose up to 15% of tuition fees to delayed payments and spend 15–20 hours each month on manual bookkeeping.
+            </p>
+
+            <div class="calc-benefit-list">
+              <div class="cbl-item">
+                <div class="cbl-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                <div>
+                  <strong>Zero Lost Fees:</strong>
+                  <span>Polite automated reminders ensure dues are paid on time without awkward conversations.</span>
+                </div>
+              </div>
+              <div class="cbl-item">
+                <div class="cbl-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <div>
+                  <strong>Hours Reclaimed:</strong>
+                  <span>Spend your valuable time teaching instead of manual book entry.</span>
+                </div>
+              </div>
+              <div class="cbl-item">
+                <div class="cbl-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <div>
+                  <strong>100% Commission-Free:</strong>
+                  <span>Tutin never takes a cut of your hard-earned student tuition fees.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-box-col">
+            <div class="calc-card">
+              
+              <!-- Slider 1: Students -->
+              <div class="calc-slider-group">
+                <div class="cs-header">
+                  <label for="sliderStudents">Number of Enrolled Students</label>
+                  <span class="cs-val" id="valStudents">45 Students</span>
+                </div>
+                <input type="range" id="sliderStudents" min="5" max="250" step="5" value="45" class="range-slider">
+                <div class="range-marks">
+                  <span>5</span>
+                  <span>100</span>
+                  <span>250+</span>
+                </div>
+              </div>
+
+              <!-- Slider 2: Fee per student -->
+              <div class="calc-slider-group">
+                <div class="cs-header">
+                  <label for="sliderFee">Monthly Fee per Student</label>
+                  <span class="cs-val" id="valFee">₹2,500 / mo</span>
+                </div>
+                <input type="range" id="sliderFee" min="500" max="10000" step="250" value="2500" class="range-slider">
+                <div class="range-marks">
+                  <span>₹500</span>
+                  <span>₹5,000</span>
+                  <span>₹10,000</span>
+                </div>
+              </div>
+
+              <!-- Realtime Output Metrics Grid -->
+              <div class="calc-results-box">
+                <div class="cr-tile">
+                  <span class="cr-label">Monthly Tuition Volume</span>
+                  <strong class="cr-highlight" id="resRevenue">₹1,12,500</strong>
+                </div>
+                <div class="cr-tile">
+                  <span class="cr-label">Recovered Unpaid Dues</span>
+                  <strong class="cr-success" id="resRecovered">+₹16,875 / mo</strong>
+                </div>
+                <div class="cr-tile full-width">
+                  <span class="cr-label">Admin Time Reclaimed</span>
+                  <strong class="cr-primary" id="resHoursSaved">18 Hours / Month</strong>
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-block btn-lg" id="calcCtaBtn">
+                <i class="fa-solid fa-rocket"></i> Start Saving Time with Tutin Free
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 10. Testimonials & Verified Reviews ──────────────────── -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="badge-pill center">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Student & Educator Stories</span>
+          </div>
+          <h2 class="section-title">Loved by Thousands Across India</h2>
+          <p class="section-subtitle">
+            See how Tutin is transforming everyday tuition operations for tutors, students, and parents.
+          </p>
+
+          <!-- Filter Pills -->
+          <div class="testimonial-filter-pills">
+            <button class="tf-btn active" data-filter="all">All Reviews</button>
+            <button class="tf-btn" data-filter="tutor">Tutors & Institutes</button>
+            <button class="tf-btn" data-filter="student">Students & Parents</button>
+          </div>
+        </div>
+
+        <div class="testimonials-grid" id="testimonialsGrid">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card" data-category="tutor">
+            <div class="tc-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="tc-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tc-text">
+              "Before Tutin, tracking monthly fees across 3 batches was an absolute nightmare. With Tutin, I tap once to mark a fee paid, and a clean digital receipt goes to the parent automatically. My pending fee delay dropped from 40 days to practically zero."
+            </p>
+            <div class="tc-header">
+              <img src="assets/avatars/avatar_1.png" alt="Dr. Arvind Sharma" class="tc-avatar">
+              <div class="tc-meta">
+                <h4 class="tc-name">Dr. Arvind Sharma</h4>
+                <p class="tc-role">Physics Educator, Delhi NCR (15 Yrs Exp)</p>
+              </div>
+              <span class="tc-badge"><i class="fa-solid fa-certificate"></i> Verified Tutor</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card" data-category="student">
+            <div class="tc-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="tc-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tc-text">
+              "Finding notes used to be so frustrating when teachers sent them into WhatsApp chats that got buried in memes. On Tutin, all lecture sheets and formula booklets are filed batch-wise. Plus, my parents get instant receipts directly."
+            </p>
+            <div class="tc-header">
+              <img src="assets/avatars/avatar_2.png" alt="Aarav Sharma" class="tc-avatar">
+              <div class="tc-meta">
+                <h4 class="tc-name">Aarav Sharma</h4>
+                <p class="tc-role">Class 12 CBSE Student, Model Town</p>
+              </div>
+              <span class="tc-badge student"><i class="fa-solid fa-check"></i> Enrolled Student</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card" data-category="tutor">
+            <div class="tc-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="tc-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tc-text">
+              "The digital profile card feature is game-changing. Whenever a new parent inquires about tuitions, I simply share my Tutin link. They can see my credentials, video demo, and verified student reviews instantly. Enquiries convert twice as fast now!"
+            </p>
+            <div class="tc-header">
+              <img src="assets/avatars/avatar_5.png" alt="Sunita Rao" class="tc-avatar">
+              <div class="tc-meta">
+                <h4 class="tc-name">Sunita Rao, M.Sc</h4>
+                <p class="tc-role">Mathematics Faculty, Bangalore</p>
+              </div>
+              <span class="tc-badge"><i class="fa-solid fa-certificate"></i> Verified Tutor</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card" data-category="student">
+            <div class="tc-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="tc-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tc-text">
+              "As a working parent, keeping track of monthly cash payments to private tutors was clumsy. Tutin provides complete transparency. We know the exact schedule, receive digital receipts instantly, and know our son is attending classes regularly."
+            </p>
+            <div class="tc-header">
+              <img src="assets/avatars/avatar_4.png" alt="Rajesh Patel" class="tc-avatar">
+              <div class="tc-meta">
+                <h4 class="tc-name">Rajesh Patel</h4>
+                <p class="tc-role">Parent of Class 10 Student, Ahmedabad</p>
+              </div>
+              <span class="tc-badge parent"><i class="fa-solid fa-user-shield"></i> Parent</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card" data-category="tutor">
+            <div class="tc-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="tc-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tc-text">
+              "QR code admission is brilliant. At the start of the academic year, I printed my batch QR code and placed it at the entrance. In two days, 45 students scanned and joined without me having to type a single contact number into my phone."
+            </p>
+            <div class="tc-header">
+              <img src="assets/avatars/avatar_7.png" alt="Vikas Malhotra" class="tc-avatar">
+              <div class="tc-meta">
+                <h4 class="tc-name">Vikas Malhotra</h4>
+                <p class="tc-role">Commerce & Accounts Master, Jaipur</p>
+              </div>
+              <span class="tc-badge"><i class="fa-solid fa-certificate"></i> Verified Tutor</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card" data-category="student">
+            <div class="tc-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="tc-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="tc-text">
+              "Found my Biology tutor through Tutin's local discovery. The verified student ratings gave me confidence, and she's genuinely the best teacher I've had. Everything from test schedules to revision sheets is right here in the app."
+            </p>
+            <div class="tc-header">
+              <img src="assets/avatars/avatar_3.png" alt="Kritika Joshi" class="tc-avatar">
+              <div class="tc-meta">
+                <h4 class="tc-name">Kritika Joshi</h4>
+                <p class="tc-role">NEET Aspirant, Chandigarh</p>
+              </div>
+              <span class="tc-badge student"><i class="fa-solid fa-check"></i> Enrolled Student</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 11. Trust & Safety Guarantee ────────────────────────── -->
+    <section class="trust-guarantee-section">
+      <div class="container">
+        <div class="trust-box">
+          
+          <div class="trust-badge-item">
+            <div class="tbi-icon"><i class="fa-solid fa-lock"></i></div>
+            <div class="tbi-content">
+              <h4>Bank-Grade Data Privacy</h4>
+              <p>Student and tutor contact details are completely protected. No spam, no unauthorized leaks.</p>
+            </div>
+          </div>
+
+          <div class="trust-badge-item">
+            <div class="tbi-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <div class="tbi-content">
+              <h4>100% Commission-Free</h4>
+              <p>Keep every rupee you earn. Tutin never deducts commissions from your hard-earned tuition fees.</p>
+            </div>
+          </div>
+
+          <div class="trust-badge-item">
+            <div class="tbi-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="tbi-content">
+              <h4>Verified Profiles & Testimonials</h4>
+              <p>Strict verification protocols ensure students and tutors interact in a trustworthy, genuine environment.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 12. Frequently Asked Questions ──────────────────────── -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="badge-pill center">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Got Questions?</span>
+          </div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Everything you need to know about getting started with Tutin.
+          </p>
+        </div>
+
+        <div class="faq-accordion-wrapper">
+          
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is Tutin completely free to get started?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Tutors and students can get started on Tutin completely free. You can create batches, admit students, record fees, share notes, and create your public digital profile card at zero cost.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Does Tutin deduct any commission from my tuition fees?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Absolutely not!</strong> Unlike aggregator platforms that take 20% to 50% commission cuts, Tutin is 100% commission-free. Your fees are paid directly between parents and you (cash, UPI, bank transfer). Tutin simply tracks records and sends automated receipts.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does the QR Code batch admission work?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Each batch you create generates a unique QR code and a 6-digit code. You can display this QR in your classroom or send it via WhatsApp. When a student scans it with the Tutin app or camera, a join request is sent to you. You can review and approve students with a single tap.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do verified student testimonials work?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Only students who have been accepted into your batches can submit a review. This eliminates fake reviews and spam. Once submitted, you can review testimonials before displaying them publicly on your teacher profile card.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can parents see fee receipts and class schedules?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Students and parents have access to their digital fee passbook. Whenever a tutor marks a fee as received, parents receive instant notification and a downloadable PDF receipt with the teacher's brand.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What boards and classes does Tutin support?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Tutin supports all major Indian educational boards including CBSE, ICSE, HBSE, UP Board, Maharashtra Board, and other state boards, covering classes from 1st standard to 12th standard across all Science, Commerce, and Humanities subjects.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="faq-footer-bar">
+          <p>Have more questions or need custom onboarding for your coaching institute?</p>
+          <a href="mailto:support@tutin.app" class="btn btn-sm btn-ghost"><i class="fa-solid fa-envelope"></i> Contact Support Team</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 13. Final Call to Action ─────────────────────────────── -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="cta-glow-decor" aria-hidden="true"></div>
+          
+          <div class="cta-content">
+            <div class="cta-badge">
+              <i class="fa-solid fa-sparkles"></i> The Modern Way to Manage Tuitions
+            </div>
+            <h2 class="cta-title">Ready to Elevate Your Tuition Journey?</h2>
+            <p class="cta-subtitle">
+              Join thousands of visionary educators and ambitious students already using Tutin across India. Set up your batches and digital identity in less than 2 minutes.
+            </p>
+
+            <div class="cta-action-buttons">
+              <button class="btn btn-white btn-lg" id="bannerDownloadBtn">
+                <i class="fa-brands fa-google-play"></i> Download for Android
+              </button>
+              <button class="btn btn-white-outline btn-lg" id="bannerIosBtn">
+                <i class="fa-brands fa-apple"></i> Download for iOS
+              </button>
+              <a href="https://tutin-836ca.web.app" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-white btn-lg">
+                <i class="fa-solid fa-globe"></i> Launch Web App
+              </a>
+            </div>
+
+            <div class="cta-reassure-text">
+              <span><i class="fa-solid fa-circle-check"></i> Free forever basic tier</span>
+              <span><i class="fa-solid fa-circle-check"></i> No credit card required</span>
+              <span><i class="fa-solid fa-circle-check"></i> 100% Commission-free</span>
+            </div>
+          </div>
+
+          <div class="cta-graphic">
+            <div class="qr-download-card">
+              <img src="assets/images/logo.png" alt="Tutin App Icon" class="qr-app-icon">
+              <h5 class="qr-card-title">Scan to Download</h5>
+              <p class="qr-card-sub">Available on iOS & Android</p>
+              
+              <!-- SVG QR Code Mockup -->
+              <div class="qr-code-box">
+                <svg viewBox="0 0 100 100" class="qr-svg" aria-label="QR Code">
+                  <path d="M0,0 h30 v30 h-30 z M6,6 h18 v18 h-18 z M10,10 h10 v10 h-10 z" fill="#1E1B4B"/>
+                  <path d="M70,0 h30 v30 h-30 z M76,6 h18 v18 h-18 z M80,10 h10 v10 h-10 z" fill="#1E1B4B"/>
+                  <path d="M0,70 h30 v30 h-30 z M6,76 h18 v18 h-18 z M10,80 h10 v10 h-10 z" fill="#1E1B4B"/>
+                  <rect x="38" y="10" width="8" height="8" fill="#3730A3"/>
+                  <rect x="52" y="10" width="8" height="8" fill="#3730A3"/>
+                  <rect x="38" y="24" width="8" height="8" fill="#1E1B4B"/>
+                  <rect x="10" y="38" width="8" height="8" fill="#3730A3"/>
+                  <rect x="24" y="38" width="8" height="8" fill="#1E1B4B"/>
+                  <rect x="38" y="38" width="10" height="10" fill="#3730A3"/>
+                  <rect x="52" y="38" width="10" height="10" fill="#1E1B4B"/>
+                  <rect x="66" y="38" width="8" height="8" fill="#3730A3"/>
+                  <rect x="80" y="38" width="8" height="8" fill="#1E1B4B"/>
+                  <rect x="38" y="52" width="8" height="8" fill="#1E1B4B"/>
+                  <rect x="52" y="52" width="10" height="10" fill="#3730A3"/>
+                  <rect x="66" y="52" width="8" height="8" fill="#1E1B4B"/>
+                  <rect x="80" y="52" width="8" height="8" fill="#3730A3"/>
+                  <rect x="38" y="66" width="8" height="8" fill="#3730A3"/>
+                  <rect x="52" y="66" width="8" height="8" fill="#1E1B4B"/>
+                  <rect x="66" y="66" width="8" height="8" fill="#3730A3"/>
+                  <rect x="80" y="66" width="8" height="8" fill="#1E1B4B"/>
+                  <rect x="38" y="80" width="8" height="8" fill="#1E1B4B"/>
+                  <rect x="66" y="80" width="10" height="10" fill="#3730A3"/>
+                  <rect x="80" y="80" width="8" height="8" fill="#1E1B4B"/>
+                </svg>
+                <div class="qr-center-logo">
+                  <img src="assets/images/tutin_logo_small.png" alt="Tutin">
+                </div>
+              </div>
+              <span class="qr-footer-tag"><i class="fa-solid fa-camera"></i> Point phone camera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── 14. Footer ───────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-brand-col">
+        <a href="#" class="footer-logo">
+          <img src="assets/images/tutin_logo_white.png" alt="Tutin Logo White" class="logo-image-footer" onerror="this.onerror=null; this.src='assets/images/logo.png';">
+        </a>
+        <p class="footer-tagline">
+          Your Digital Tuition Identity. Empowering independent educators, coaching centers, and students across India.
+        </p>
+        <div class="footer-social-links">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h5 class="footer-col-title">Platform</h5>
+        <ul class="footer-links-list">
+          <li><a href="#features">Smart Batches</a></li>
+          <li><a href="#features">Fee Tracking</a></li>
+          <li><a href="#features">Teacher Profile Card</a></li>
+          <li><a href="#discovery">Local Tutor Search</a></li>
+          <li><a href="#interactive-demo">Study Materials Hub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h5 class="footer-col-title">For Educators</h5>
+        <ul class="footer-links-list">
+          <li><a href="#for-tutors">Why Join Tutin?</a></li>
+          <li><a href="#calculator">Fee & ROI Calculator</a></li>
+          <li><a href="#features">QR Code Admission</a></li>
+          <li><a href="#testimonials">Teacher Reviews</a></li>
+          <li><a href="#" id="footerTeacherJoinLink">Create Profile Card</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h5 class="footer-col-title">Top Subjects</h5>
+        <ul class="footer-links-list">
+          <li><a href="#discovery">Physics Tutors</a></li>
+          <li><a href="#discovery">Mathematics Tutors</a></li>
+          <li><a href="#discovery">Chemistry Tutors</a></li>
+          <li><a href="#discovery">Biology Tutors</a></li>
+          <li><a href="#discovery">Commerce & Accounts</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h5 class="footer-col-title">Legal & Contact</h5>
+        <ul class="footer-links-list">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Security & Safety</a></li>
+          <li><a href="mailto:support@tutin.app">support@tutin.app</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="fb-divider"></div>
+      <div class="fb-row">
+        <p>&copy; 2026 Tutin. All rights reserved. Made with ❤️ for Indian education.</p>
+        <p class="fb-sub">Designed for CBSE, ICSE & State Boards across India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── 15. Modals ───────────────────────────────────────────── -->
+  
+  <!-- Download Modal -->
+  <div class="modal-backdrop" id="downloadModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeDownloadModal" aria-label="Close dialog">&times;</button>
+      
+      <div class="modal-header">
+        <img src="assets/images/logo.png" alt="Tutin" class="modal-logo">
+        <h3 class="modal-title">Get the Tutin App</h3>
+        <p class="modal-desc">Scan the QR code or get a direct SMS link to download on your smartphone.</p>
+      </div>
+
+      <div class="modal-body text-center">
+        <div class="modal-qr-container">
+          <svg viewBox="0 0 100 100" class="modal-qr-svg">
+            <path d="M0,0 h30 v30 h-30 z M6,6 h18 v18 h-18 z M10,10 h10 v10 h-10 z" fill="#1E1B4B"/>
+            <path d="M70,0 h30 v30 h-30 z M76,6 h18 v18 h-18 z M80,10 h10 v10 h-10 z" fill="#1E1B4B"/>
+            <path d="M0,70 h30 v30 h-30 z M6,76 h18 v18 h-18 z M10,80 h10 v10 h-10 z" fill="#1E1B4B"/>
+            <rect x="38" y="10" width="8" height="8" fill="#3730A3"/>
+            <rect x="52" y="10" width="8" height="8" fill="#3730A3"/>
+            <rect x="38" y="24" width="8" height="8" fill="#1E1B4B"/>
+            <rect x="10" y="38" width="8" height="8" fill="#3730A3"/>
+            <rect x="24" y="38" width="8" height="8" fill="#1E1B4B"/>
+            <rect x="38" y="38" width="10" height="10" fill="#3730A3"/>
+            <rect x="52" y="38" width="10" height="10" fill="#1E1B4B"/>
+            <rect x="66" y="38" width="8" height="8" fill="#3730A3"/>
+            <rect x="80" y="38" width="8" height="8" fill="#1E1B4B"/>
+            <rect x="38" y="52" width="8" height="8" fill="#1E1B4B"/>
+            <rect x="52" y="52" width="10" height="10" fill="#3730A3"/>
+            <rect x="66" y="52" width="8" height="8" fill="#1E1B4B"/>
+            <rect x="80" y="52" width="8" height="8" fill="#3730A3"/>
+            <rect x="38" y="66" width="8" height="8" fill="#3730A3"/>
+            <rect x="52" y="66" width="8" height="8" fill="#1E1B4B"/>
+            <rect x="66" y="66" width="8" height="8" fill="#3730A3"/>
+            <rect x="80" y="66" width="8" height="8" fill="#1E1B4B"/>
+            <rect x="38" y="80" width="8" height="8" fill="#1E1B4B"/>
+            <rect x="66" y="80" width="10" height="10" fill="#3730A3"/>
+            <rect x="80" y="80" width="8" height="8" fill="#1E1B4B"/>
+          </svg>
+        </div>
+
+        <div class="modal-buttons-row">
+          <a href="#" class="modal-store-btn" onclick="alert('Redirecting to Google Play Store...'); return false;">
+            <i class="fa-brands fa-google-play fa-xl"></i>
+            <div>
+              <small>GET IT ON</small>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+          <a href="#" class="modal-store-btn" onclick="alert('Redirecting to Apple App Store...'); return false;">
+            <i class="fa-brands fa-apple fa-xl"></i>
+            <div>
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </div>
+          </a>
+        </div>
+
+        <div class="modal-divider"><span>OR SEND LINK TO PHONE</span></div>
+
+        <form class="modal-phone-form" onsubmit="event.preventDefault(); alert('Download link sent to +91 ' + document.getElementById('phoneInput').value); document.getElementById('downloadModal').classList.remove('open');">
+          <div class="phone-input-wrap">
+            <span class="country-code">+91</span>
+            <input type="tel" id="phoneInput" placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Link</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teacher Onboarding Modal -->
+  <div class="modal-backdrop" id="teacherModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <button class="modal-close-btn" id="closeTeacherModal" aria-label="Close dialog">&times;</button>
+      
+      <div class="modal-header">
+        <span class="badge-pill"><span class="badge-dot"></span> Tutor Registration</span>
+        <h3 class="modal-title">Create Your Digital Tuition Card</h3>
+        <p class="modal-desc">Join 1,200+ verified tutors and get your personal web profile link today.</p>
+      </div>
+
+      <div class="modal-body">
+        <form class="teacher-onboard-form" onsubmit="event.preventDefault(); alert('Thank you! Our onboarding team will send your personal verification link via WhatsApp.'); document.getElementById('teacherModal').classList.remove('open');">
+          <div class="form-row-2">
+            <div class="form-field">
+              <label>Full Name *</label>
+              <input type="text" placeholder="e.g. Dr. Ramesh Gupta" required>
+            </div>
+            <div class="form-field">
+              <label>WhatsApp Mobile *</label>
+              <input type="tel" placeholder="10-digit WhatsApp number" required>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label>Primary Subject *</label>
+              <input type="text" placeholder="e.g. Mathematics, Physics" required>
+            </div>
+            <div class="form-field">
+              <label>City & Center Area *</label>
+              <input type="text" placeholder="e.g. Model Town, Delhi" required>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label>Target Classes</label>
+              <input type="text" placeholder="e.g. Class 10, 11, 12">
+            </div>
+            <div class="form-field">
+              <label>Years of Teaching Experience</label>
+              <input type="number" placeholder="e.g. 8" min="0" max="50">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>Short Bio / Qualifications</label>
+            <textarea rows="2" placeholder="Tell students about your qualifications and teaching methodology..."></textarea>
+          </div>
+
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">
+              <i class="fa-solid fa-check"></i> Submit & Claim Digital Profile Card
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teacher Profile View Modal -->
+  <div class="modal-backdrop" id="profileCardModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeProfileModal" aria-label="Close dialog">&times;</button>
+      <div class="profile-modal-content" id="profileModalDynamicContent">
+        <!-- Dynamically rendered -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
